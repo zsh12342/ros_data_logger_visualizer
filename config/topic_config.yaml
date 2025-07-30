@@ -1,7 +1,13 @@
-topic_name: "/your_topic_name"
-msg_type: "std_msgs/Float32MultiArray"  # 示例消息类型
+topic_name: "/humanoid_mpc_foot_pose_target_trajectories"
+msg_type: "kuavo_msgs/footPoseTargetTrajectories"  # 示例消息类型
 fields:
-  - "data[0]"
-  - "data[1]"
+  - "footPoseTrajectory[0].footPose[0]"
+  - "footPoseTrajectory[0].footPose[1]"
+  - "footPoseTrajectory[0].footPose[2]"
+  - "footPoseTrajectory[0].footPose[3]"
+  - "footPoseTrajectory[0].torsoPose[0]"
+  - "footPoseTrajectory[0].torsoPose[1]"
+  - "footPoseTrajectory[0].torsoPose[2]"
+  - "footPoseTrajectory[0].torsoPose[3]"
 rate: 10  # 采样频率（Hz）
 outlier_threshold: 100  # 异常突变阈值（可选）

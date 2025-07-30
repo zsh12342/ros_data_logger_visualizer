@@ -25,13 +25,18 @@ roscore
 rosrun ros_data_logger_visualizer data_logger.py
 ```
 
-或直接用 Python 运行：
+或直接用 Python 运行（需已 source 工作空间）：
 
 ```bash
 python3 scripts/data_logger.py
 ```
 
 4. 运行后会在 `output/` 目录下自动生成 CSV 文件，并弹出实时曲线窗口。
+
+> **注意：**
+> - 如需订阅自定义消息类型（如 kuavo_msgs），必须保证该消息包已在同一 catkin 工作空间下，并已成功编译。
+> - 每次新开终端运行前，务必执行 `source devel/setup.bash`（或 `source devel/setup.zsh`），否则会出现 `ModuleNotFoundError: No module named 'xxx_msgs'`。
+> - 推荐使用 rosrun/roslaunch 启动节点。
 
 ## ⚙️ 配置说明
 
@@ -78,5 +83,5 @@ ros_data_logger_visualizer/
 
 ## 🧩 其他
 
-- 支持自定义消息类型（需已编译对应 ROS msg）
+- 支持自定义消息类型（需已编译对应 ROS msg，且已 source 工作空间）
 - 可根据需要扩展异常值处理、可视化等功能
