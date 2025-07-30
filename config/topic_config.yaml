@@ -1,0 +1,7 @@
+topic_name: "/your_topic_name"
+msg_type: "std_msgs/Float32MultiArray"  # 示例消息类型
+fields:
+  - "data[0]"
+  - "data[1]"
+rate: 10  # 采样频率（Hz）
+outlier_threshold: 100  # 异常突变阈值（可选）

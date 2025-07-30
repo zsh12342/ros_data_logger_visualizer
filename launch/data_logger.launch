@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="ros_data_logger_visualizer" type="data_logger.py" name="data_logger_node" output="screen" />
+</launch>
